@@ -17,7 +17,7 @@ title: Gh0st99 Blog
 email: hybridb99#163.com
 description: >- # this means to ignore newlines until "baseurl:"
   Just Blog.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: Gh0st99 
