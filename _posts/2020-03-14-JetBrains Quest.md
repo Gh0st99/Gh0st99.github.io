@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Jetbrains Quest"
+title: "Jetrains Quest"
 date: 2020-03-14 00:03:41 +0800
-categories: Jetbrains
+categories: JetBrains
 ---
 
 ## Quest 1
@@ -127,7 +127,7 @@ Annual report, sharing the section with
 
 ![qust-2-5]({{ site.url }}/assets/imgs/jetbrains_quest/quest-2-5.png)
 
-可以看出右侧 `hiring`，跳转 [Jetbrains 招聘](http://jetbrains.com/jobs)
+可以看出右侧 `hiring`，跳转 [JetBrains 招聘](http://jetbrains.com/jobs)
 
 都填 `any`，跳转 [无畏的应聘者](https://www.jetbrains.com/careers/jobs/fearless-quester-356)
 
