@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jetrains Quest"
+title: "JetBrains Quest"
 date: 2020-03-14 00:03:41 +0800
 categories: JetBrains
 ---
