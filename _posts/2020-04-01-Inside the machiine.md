@@ -70,6 +70,8 @@ OS 总是将程序**数据段**(`Data Segment`)的起始地址存入 `D`。
 
 计算指令的二进制格式
 
+### 算数指令
+
 ```
 0    123    45      67      89          101112131415
 mode opcode source1 source2 destination 000000
@@ -82,6 +84,58 @@ mode opcode source  destination  immediate value
 
 add C, 8, A
 ```
+
+### 内存访问指令
+
+```
+load 指令
+
+load immediate
+0    123    45      67           89101112131415
+mode opcode 00      destination  immediate value
+
+load #12, A
+
+load 指令类似
+```
+
+![2-8]({{ site.url }}/assets/imgs/inside_the_machine/itm-2-3.png)
+
+程序以有序的指令顺序存储在内存中，内存按线性地址排序。每一个指令都在自己的内存地址中。
+
+### 获取指令 
+
+fetch 是特殊类型的 load，自动发生在每个指令上。将 `program counter`中当前内存 作为 `source`，`instruction register` 作为 `destination`。控制单元使用 `fetch` 将**内存中的指令加载到寄存器**中。指令接着被 `decode` 接着执行。
+
+在 `decode` 的时候，通过增长 `pc` 中地址的值将下一条指令的地址放入 `pc`
+
+- Fetch
+- Decode
+- Execute
+
+### 分支指令
+
+- 无条件分支
+
+`jump #target`
+
+- 条件分支
+
+比如根据前条算数指令的值是 0 还是 > 0, < 0 决定是否跳转。而判断的结果存在 `processor status word` 中某个 `bit` 中。
+
+通过检查 `PSW` 中某个 `bit` 来决定是否跳转。
+
+```
+sub A, B, C
+jumpz #106
+add A, B, C
+```
+
+如果 C == 0, 通过检查 `psw` 中某个 `bit` 满足则将 106 放到 `pc` 中。否则，照旧执行以一条指令。
+
+### 分支指令作为 Load 的特殊类型指令
+
+其实 `#target` 作为 source， `pc` 作为 destination。
 
 - Fetch
 - Decode
