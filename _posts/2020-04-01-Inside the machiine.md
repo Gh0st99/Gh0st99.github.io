@@ -147,6 +147,13 @@ add A, B, C
 ![3-1]({{ site.url }}/assets/imgs/inside_the_machine/itm-3-1.png)
 ![3-2]({{ site.url }}/assets/imgs/inside_the_machine/itm-3-2.png)
 ![3-3]({{ site.url }}/assets/imgs/inside_the_machine/itm-3-3.png)
+![3-7]({{ site.url }}/assets/imgs/inside_the_machine/itm-3-7.png)
+
+程序执行时间 = 程序指令条数 / 指令完成率
+
+Instruction Throughput(Instruction per clock, IPC)
+
+流水线失速
 
 
 ## 4. Superscalar(超标量)执行
