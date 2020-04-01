@@ -142,7 +142,11 @@ add A, B, C
 - Fetch
 - Decode
 - Execute
-- Write
+- Write("write-back")
+
+![3-1]({{ site.url }}/assets/imgs/inside_the_machine/itm-3-1.png)
+![3-2]({{ site.url }}/assets/imgs/inside_the_machine/itm-3-2.png)
+![3-3]({{ site.url }}/assets/imgs/inside_the_machine/itm-3-3.png)
 
 
 ## 4. Superscalar(超标量)执行
