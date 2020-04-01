@@ -99,7 +99,7 @@ load #12, A
 load 指令类似
 ```
 
-![2-8]({{ site.url }}/assets/imgs/inside_the_machine/itm-2-3.png)
+![2-8]({{ site.url }}/assets/imgs/inside_the_machine/itm-2-8.png)
 
 程序以有序的指令顺序存储在内存中，内存按线性地址排序。每一个指令都在自己的内存地址中。
 
@@ -137,12 +137,15 @@ add A, B, C
 
 其实 `#target` 作为 source， `pc` 作为 destination。
 
+## 3. 流水线执行
+
 - Fetch
 - Decode
 - Execute
 - Write
 
-## 4.Superscalar(超标量)执行
+
+## 4. Superscalar(超标量)执行
 
 指令级别并行。一个 clock cycle(时钟周期) **同时分派多个指令给不同的执行单元**。
 
