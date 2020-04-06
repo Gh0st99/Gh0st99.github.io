@@ -102,6 +102,7 @@ EventHandlerGroup<T> createEventProcessors(
 }
 ```
 ![disruptor-class]({{ site.url }}/assets/imgs/disruptor/disruptor-class.png)
+{% comment %} 
 ```plantuml
 @startuml Disruptor 组建图
 interface Runnable {
@@ -211,6 +212,7 @@ ProcessingSequenceBarrier *-- WaitStrategy
 AbstractSequencer *-- WaitStrategy
 @enduml
 ```
+{% endcomment %}
 
 ### 消费者核心代码
 
