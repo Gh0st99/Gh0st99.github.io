@@ -201,3 +201,95 @@ Instruction Throughput(Instruction per clock, IPC)
 从 `register file` 读取一个寄存器中的一个值： `ALU` 访问 `register file` 的 `read port` 并从一个位于**数据总线**上与 `ALU` 共享的特殊的寄存器获取。
 
 一个 `read port` 允许 `ALU` 一次访问一个 `register`。所以 `add` 取 2 个数，需要两个 `read port` 和一个 `write port`。
+
+## 5. 英特尔奔腾[Pro]
+
+integer pipeline:
+
+- Prefetch/Fetch
+    - 到缓冲(buffer),标注和分离每条指令的边界。
+- Decode-1
+    - 解码到奔腾内部指令格式，告诉处理器执行单元如何操纵数据流；
+    - 包含了分支单元，检测当前被解码的指令是否是一个分支，分支预测也在这里发生。
+- Decode-2
+    - 额外地址计算，因为 x86 支持更复杂地址模式；
+    - microcode ROM，解码长指令。
+- Execute
+- Write-back
+
+
+### 分支单元和分支预测
+
+- branch execution unit
+- branch prediction unit
+
+当解码器解码到一个分支指令，解码器将其发给 `BU`(分支单元)。`BU` 再将其发给其他执行单元评估指令的分支情况。如果分支成立，则将 `target address` 计算后告知前端并开始 `fetch`。
+
+老的处理器就只能傻等。而现代处理器使用了 `speculative execution`(投机执行)：进行有根据的猜测，在评估分支情况前执行新的分支。
+
+投机执行的指令必须等评估完分支条件后才能写入 `register file`：如果 `BPU` 评估分支正确，投机执行的指令被标记为非投机并如同普通指令一样写回结果。
+
+- 静态预测
+    - 假定向后分支将会发生，向前的分支不会发生。向后分支，是指跳转到的新地址比当前地址要低。这有助于配合经常出现的程序的循环控制结构。
+    - 如果程序充满循环则工作的不错。反之则不行。
+- 动态预测
+    - 两个表记录已经执行分支的信息：
+        - branch history table: 记录最后几个时钟周期执分支的执行的可能性
+        - branch target buffer： 之前执行分支的 `branch target`
+
+### 后端
+
+#### Integer ALUs
+
+非对称，有一个复杂、接活多。
+
+#### Floating-Point ALU
+
+### 前后端解耦
+
+#### 静态
+
+指令 fetch、decode 然后使用硬件规则来决定指令是否能并行执行。`control unit` 将他们发给两个 `ALU` 在一个时钟周期同时执行。
+
+缺陷：
+
+- 动态的 `ever-changing` 的代码流适应性差；
+- 超标量硬件没啥用。
+
+#### 动态
+
+- issue 阶段
+
+分派新解码的指令到一个位于前端和 `ececution units` 中间的缓冲中。当缓冲收集了少数等待执行的指令后。
+
+在考虑处理器状态和执行现有的资源后在最适合的时间以及最优的顺序 `issue` 指令。
+
+从缓冲中 `issue` 到 `execution unit` 的指令当执行完成后必须还原回程序顺序。这就需要第二个缓冲。
+
+![5-8]({{ site.url }}/assets/imgs/inside_the_machine/itm-5-8.png)
+
+
+`out-of-order execution`,`dynamic execution`
+
+- fetch
+- decode/dispatch   in order
+- issue             reorder
+- execute           out of order
+- complete          reorder
+- write-back        in order
+
+```
+So if an instruction is preceded by a pipeline bubble, when it enters the issue buffer, it will drop down into the empty space directly behind the instruction ahead of it, thereby eliminating the bubble. 
+```
+
+- completion 阶段
+
+当乱序执行之后，结果到一个专门用于这个指令的特殊的重命名的寄存器。这个寄存器对程序员不可见。
+
+`intel P6`: `ROB`(reorder buffer) 记录了所有流入后端乱序指令的必要信息保证所有执完的指令还原回程序顺序。
+
+- 指令窗口
+
+`ROB` 记录原序的 40 条指令。
+
+`Reservation Station` 重排序指令 20条指令。作为指令窗口在 `ROB` 中移动。
