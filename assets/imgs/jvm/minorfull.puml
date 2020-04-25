@@ -1,0 +1,21 @@
+@startuml 担保机制
+start
+:准备 Minor GC;
+if (老年代最大连续空间 > 新生代所有对象的总空间?) then (yes)
+    :Minor GC;
+    stop
+else (no)
+    if (-XX:HandlePromotionFailure 开启?) then (yes)
+        if (老年代最大连续空间 > 历次今生到老年代对象的平均大小?) then (yes)
+            :Minor GC;
+            stop
+        else (no)
+            :Full GC;
+            stop
+        endif
+    else (no)
+        :Full GC;
+        stop
+    endif
+endif
+@enduml
