@@ -29,7 +29,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-paginate: 5
+paginate: 10
 paginate_path: "/page/:num/"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -42,3 +42,6 @@ paginate_path: "/page/:num/"
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+author: Gh0st99
+timezone: Asia/Shanghai
