@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="217px" preserveAspectRatio="none" style="width:309px;height:217px;background:#FFFFFF;" version="1.1" viewBox="0 0 309 217" width="309px" zoomAndPan="magnify"><defs><filter height="300%" id="fe0xsyfn8a8x" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#fe0xsyfn8a8x)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="38" x="10" y="89.668"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="20" y="112.6631">ES</text><rect fill="#FEFECE" filter="url(#fe0xsyfn8a8x)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="48" x="98" y="20"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="108" y="42.9951">原理</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="199" y="33.8467">写入，查询过程</text><path d="M146,38.1484 L156,38.1484 C171,38.1484 171,29 186,29 L196,29 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="199" y="52.1436">底层实现</text><path d="M146,38.1484 L156,38.1484 C171,38.1484 171,47.2969 186,47.2969 L196,47.2969 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><path d="M48,107.8164 L58,107.8164 C73,107.8164 73,38.1484 88,38.1484 L98,38.1484 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#fe0xsyfn8a8x)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="48" x="98" y="84.7422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="108" y="107.7373">集群</text><rect fill="#FEFECE" filter="url(#fe0xsyfn8a8x)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="76" x="196" y="66.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="206" y="89.4404">脑裂问题</text><path d="M146,102.8906 L156,102.8906 C171,102.8906 171,84.5938 186,84.5938 L196,84.5938 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="199" y="126.7373">怎么产生的</text><path d="M146,102.8906 L156,102.8906 C171,102.8906 171,121.8906 186,121.8906 L196,121.8906 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="199" y="145.0342">如何解决</text><path d="M146,102.8906 L156,102.8906 C171,102.8906 171,140.1875 186,140.1875 L196,140.1875 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><path d="M48,107.8164 L58,107.8164 C73,107.8164 73,102.8906 88,102.8906 L98,102.8906 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#fe0xsyfn8a8x)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="118" x="98" y="159.3359"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="108" y="182.3311">深度分页及优化</text><path d="M48,107.8164 L58,107.8164 C73,107.8164 73,177.4844 88,177.4844 L98,177.4844 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d7e007e72270d74461b25c47aba39f92]
+@startmindmap
+* ES
+** 原理
+***_ 写入，查询过程
+***_ 底层实现
+** 集群
+*** 脑裂问题
+***_ 怎么产生的
+***_ 如何解决
+
+** 深度分页及优化
+@endmindmap
+
+PlantUML version 1.2021.6(Fri May 14 07:09:51 UTC 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

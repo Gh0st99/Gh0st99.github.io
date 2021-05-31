@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="247px" preserveAspectRatio="none" style="width:367px;height:247px;background:#FFFFFF;" version="1.1" viewBox="0 0 367 247" width="367px" zoomAndPan="magnify"><defs><filter height="300%" id="f183q3k22d4sdv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f183q3k22d4sdv)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="48" x="10" y="104.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="20" y="127.4404">原理</text><rect fill="#FEFECE" filter="url(#f183q3k22d4sdv)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="124" x="108" y="20"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="118" y="42.9951">一致性hash原理</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="285" y="24.6982">解决的问题</text><path d="M232,38.1484 L242,38.1484 C257,38.1484 257,19.8516 272,19.8516 L282,19.8516 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="285" y="42.9951">数据倾斜</text><path d="M232,38.1484 L242,38.1484 C257,38.1484 257,38.1484 272,38.1484 L282,38.1484 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="285" y="61.292">2^32 ?</text><path d="M232,38.1484 L242,38.1484 C257,38.1484 257,56.4453 272,56.4453 L282,56.4453 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><path d="M58,122.5938 L68,122.5938 C83,122.5938 83,38.1484 98,38.1484 L108,38.1484 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#f183q3k22d4sdv)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="48" x="108" y="76.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="118" y="99.292">CAP</text><path d="M58,122.5938 L68,122.5938 C83,122.5938 83,94.4453 98,94.4453 L108,94.4453 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#f183q3k22d4sdv)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="57" x="108" y="132.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="118" y="155.5889">BASE</text><path d="M58,122.5938 L68,122.5938 C83,122.5938 83,150.7422 98,150.7422 L108,150.7422 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#f183q3k22d4sdv)" height="36.2969" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="48" x="108" y="188.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="118" y="211.8857">幂等</text><path d="M58,122.5938 L68,122.5938 C83,122.5938 83,207.0391 98,207.0391 L108,207.0391 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[65d888908e7436d4e890c1cf2dea5ae9]
+@startmindmap
+* 原理
+** 一致性hash原理
+***_ 解决的问题
+***_ 数据倾斜
+***_ 2^32 ?
+
+** CAP
+
+** BASE
+
+** 幂等
+@endmindmap
+
+PlantUML version 1.2021.6(Fri May 14 07:09:51 UTC 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
